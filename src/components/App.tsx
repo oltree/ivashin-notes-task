@@ -17,11 +17,12 @@ const App: FC = () => {
     fetch(API_SERVER)
       .then((response) => response.json())
       .then((data) => setNotes(data))
-      .catch(() =>
+      .catch((e) => {
+        console.error(e);
         console.error(
           'Clone this repository, use npm start and use npm run server'
-        )
-      );
+        );
+      });
   }, []);
 
   useEffect(() => {
