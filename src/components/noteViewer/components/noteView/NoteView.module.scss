@@ -1,0 +1,65 @@
+@mixin center($display: flex, $align-items: center, $justify-content: center) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin column($display: flex, $flex-direction: column) {
+  display: $display;
+  flex-direction: $flex-direction;
+}
+
+.wrapper {
+  @include center(flex, center, space-between);
+  gap: 40px;
+
+  .note {
+    width: 80%;
+    @include column();
+    gap: 5px;
+
+    .text {
+      padding: 5px;
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+
+    .tags {
+      padding: 0 5px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+
+      .tag {
+        padding: 5px;
+        color: #302b63;
+        border-radius: 5px;
+        background: #fff;
+      }
+    }
+  }
+
+  .buttons {
+    width: 20%;
+    @include column();
+    gap: 10px;
+
+    .button {
+      padding: 5px;
+      border-radius: 5px;
+      background: #fff;
+      border: 1px solid #fff;
+
+      &:hover {
+        color: #fff;
+        background: #302b63;
+      }
+
+      &:active {
+        background: #24243e;
+      }
+    }
+  }
+}

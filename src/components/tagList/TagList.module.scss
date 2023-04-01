@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  .button {
+    min-width: 40px;
+    padding: 5px;
+    color: #302b63;
+    font-weight: 500;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid #fff;
+
+    &:hover {
+      color: #fff;
+      background: #302b63;
+    }
+
+    &:active {
+      background: #24243e;
+    }
+
+    &:disabled {
+      color: #fff;
+      background: #24243e;
+    }
+  }
+}
