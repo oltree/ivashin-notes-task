@@ -1,5 +1,4 @@
 {
-  "homepage": "https://oltree.github.io/ivashin-notes-task",
   "name": "todolist",
   "version": "0.1.0",
   "private": true,
@@ -21,8 +20,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -48,7 +45,6 @@
     ]
   },
   "devDependencies": {
-    "@types/uuid": "^9.0.1",
-    "gh-pages": "^5.0.0"
+    "@types/uuid": "^9.0.1"
   }
 }
