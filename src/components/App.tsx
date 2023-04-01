@@ -14,16 +14,14 @@ const App: FC = () => {
   const [tags, setTags] = useState<Tags>([]);
 
   useEffect(() => {
-    try {
-      fetch(API_SERVER)
-        .then((response) => response.json())
-        .then((data) => setNotes(data));
-    } catch (e) {
-      console.error(
-        e,
-        'Clone this repository, use npm start, use npm run server'
+    fetch(API_SERVER)
+      .then((response) => response.json())
+      .then((data) => setNotes(data))
+      .catch(() =>
+        console.error(
+          'Clone this repository, use npm start and use npm run server'
+        )
       );
-    }
   }, []);
 
   useEffect(() => {
